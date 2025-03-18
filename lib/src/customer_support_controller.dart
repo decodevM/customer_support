@@ -7,6 +7,7 @@ class CustomerSupportController extends GetxController {
   final String url;
   final Function(String)? onPageFinished;
   final Function(String, int)? onError;
+  late final String title;
 
   CustomerSupportController({
     required this.url,
@@ -26,6 +27,7 @@ class CustomerSupportController extends GetxController {
   @override
   void onInit() {
     super.onInit();
+    title = Get.arguments['title'] ?? 'Customer Support';
     _initializeSettings();
     _initializePullToRefresh();
   }

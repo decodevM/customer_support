@@ -7,7 +7,6 @@ import 'customer_support_screen.dart';
 class CustomerSupportPage {
   final String name;
   final String url;
-  final String title;
   final bool showAppBar;
   final Widget? customAppBar;
   final Function(String)? onUrlChanged;
@@ -17,7 +16,6 @@ class CustomerSupportPage {
   CustomerSupportPage({
     required this.name,
     required this.url,
-    required this.title,
     this.showAppBar = true,
     this.customAppBar,
     this.onUrlChanged,
@@ -31,7 +29,6 @@ class CustomerSupportPage {
       page:
           () => CustomerSupportScreen(
             url: url,
-            title: title,
             showAppBar: showAppBar,
             customAppBar: customAppBar,
           ),

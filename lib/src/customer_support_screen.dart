@@ -8,14 +8,12 @@ import 'customer_support_controller.dart';
 
 class CustomerSupportScreen extends GetView<CustomerSupportController> {
   final String url;
-  final String title;
   final bool showAppBar;
   final Widget? customAppBar;
 
   const CustomerSupportScreen({
     super.key,
     required this.url,
-    required this.title,
     this.showAppBar = true,
     this.customAppBar,
   });
@@ -26,7 +24,7 @@ class CustomerSupportScreen extends GetView<CustomerSupportController> {
       appBar:
           showAppBar
               ? (customAppBar as PreferredSizeWidget?) ??
-                  AppBar(title: Text(title.tr))
+                  AppBar(title: Text(controller.title))
               : null,
       body: SafeArea(
         child: Stack(children: [_buildWebView(), _buildProgressBar()]),
