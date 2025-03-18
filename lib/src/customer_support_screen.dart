@@ -26,7 +26,7 @@ class CustomerSupportScreen extends GetView<CustomerSupportController> {
       appBar:
           showAppBar
               ? (customAppBar as PreferredSizeWidget?) ??
-                  AppBar(title: Text(title))
+                  AppBar(title: Text(title.tr))
               : null,
       body: SafeArea(
         child: Stack(children: [_buildWebView(), _buildProgressBar()]),
